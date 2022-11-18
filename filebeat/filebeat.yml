@@ -1,0 +1,30 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      - "/usr/share/filebeat/img.log"
+
+processors:
+  - add_docker_metadata:
+      host: "unix:///var/run/docker.sock"
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+output.logstash:
+  hosts: ["https://125.212.200.34:5044"]
+  ssl.certificate_authorities: ["/usr/share/filebeat/certs/elasticsearch-ca.pem"]
+  ssl.verification_mode: "certificate"
+
+
+log files:
+logging.level: info
+logging.to_files: false
+logging.to_syslog: false
+loggins.metrice.enabled: false
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+    #ssl.verification_mode: none

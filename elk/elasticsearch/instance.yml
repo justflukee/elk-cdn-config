@@ -1,0 +1,22 @@
+instances:
+  - name: elk-1
+    dns:
+      - elk-1 
+    ip:
+      - 125.212.200.34
+  - name: elk-2
+    dns:
+      - elk-2
+    ip:
+      - 125.212.200.36
+  - name: elk-3
+    dns:
+      - elk-3
+    ip:
+      - 125.212.200.175
+  - name: kibana
+    dns:
+      - kibana
+    ip:
+      - 127.0.0.1
+      - 125.212.200.34

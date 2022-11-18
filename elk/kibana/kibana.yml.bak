@@ -1,0 +1,11 @@
+server.port: 5601
+server.host: "0.0.0.0"
+server.publicBaseUrl: "http://125.212.200.34:5601"
+server.name: "demo-elk"
+elasticsearch.hosts: ["https://125.212.200.34:9200", "https://125.212.200.36:9200", "https://125.212.201.75:9200"]
+elasticsearch.ssl.certificateAuthorities: [ "/usr/share/kibana/config/elasticsearch-ca.pem" ]
+xpack.encryptedSavedObjects.encryptionKey: eb820e3ad30835b1a80ef83236f67aac
+xpack.reporting.encryptionKey: de9e53869be041632efd4af32c94b482
+xpack.security.encryptionKey: e4d377c265d9408bf4bd3363d83dec5c
+
+
